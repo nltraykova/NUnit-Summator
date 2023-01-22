@@ -12,7 +12,6 @@ namespace Summator
     {
         
         //Method for sum of array of numbers
-        //Test branches
         
         public static int Sum(int[] arr)
         {
