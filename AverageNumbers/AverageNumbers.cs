@@ -7,19 +7,21 @@ using System.Threading.Tasks;
 
 namespace AverageNumbers
 {
-    //Method for average of array of numbers
-    public static double Average(int[] arr)
+    public static class AverageNumbers
     {
-        double sum = 0.0;
-
-        for (int i = 0; i < arr.Length; i++)
+        //Method for average of array of numbers
+        public static double Average(double[] arr)
         {
-            sum += arr[i];
+            double sum = 0.0;
+
+            for (int i = 0; i < arr.Length; i++)
+            {
+                sum += arr[i];
+            }
+
+            return sum / arr.Length;
+
         }
 
-        return sum / arr.Length;
-    
     }
-
-
 }
