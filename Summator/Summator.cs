@@ -12,6 +12,7 @@ namespace Summator
     {
         
         //Method for sum of array of numbers
+        
         public static int Sum(int[] arr)
         {
             int sum = arr[0];
