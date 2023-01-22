@@ -10,20 +10,19 @@ namespace Summator
 {
     public static class Summator
     {
-        
-        //Method for sum of array of numbers
-        
-        public static int Sum(int[] arr)
-        {
-            int sum = arr[0];
 
-            for (int i = 1; i < arr.Length; i++)
+        //Method for sum of array of numbers
+
+        public static long Sum(int[] arr)
+        {
+            long sum = 0;
+
+            for (int i = 0; i < arr.Length; i++)
             {
                 sum += arr[i];
             }
 
             return sum;
-
         }
     }
 }
