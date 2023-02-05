@@ -5,20 +5,20 @@ namespace Summator.UnitTests
     public class SummatorTests
     {
         [Test]
-        public void Test_Summator_SumTwoPositiveNumbers() 
+        public void Test_Summator_SumTwoPositiveNumbers()
         {
             int[] nums = new int[] { 1, 2 };
             long actual = Summator.Sum(nums);
-            
+
             long expected = 3;
 
-            Assert.AreEqual(expected, actual);  
+            Assert.AreEqual(expected, actual);
         }
 
         [Test]
         public void Test_Summator_SumTwoNegativeNumbers()
         {
-            int[] nums = new int[] { -1, -99};
+            int[] nums = new int[] { -1, -99 };
             long actual = Summator.Sum(nums);
 
             long expected = -100;
@@ -40,7 +40,7 @@ namespace Summator.UnitTests
         [Test]
         public void Test_Summator_ZeroNumbers()
         {
-            int[] nums = new int[] {  };
+            int[] nums = new int[] { };
             long actual = Summator.Sum(nums);
 
             long expected = 0;
@@ -59,7 +59,6 @@ namespace Summator.UnitTests
             Assert.AreEqual(expected, actual);
         }
 
-
         [Test]
         public void Test_Summator_BigNumbers()
         {
@@ -71,6 +70,19 @@ namespace Summator.UnitTests
             Assert.AreEqual(expected, actual);
         }
 
+        //DDT
+        [TestCase(new int[] { 1, 2 }, 3)]
+        [TestCase(new int[] { -1, -99 }, -100)]
+        [TestCase(new int[] { 6 }, 6)]
+        [TestCase(new int[] { }, 0)]
+        [TestCase(new int[] { -5, 20 }, 15)]
+        [TestCase(new int[] { 2000000000, 2000000000 }, 4000000000)]
+        public void Test_Summator_DDT(int[] nums, long expected)
+        {
+            long actual = Summator.Sum(nums);
+
+            Assert.AreEqual(expected, actual);
+        }
 
     }
 }
